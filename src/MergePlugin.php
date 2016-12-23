@@ -352,6 +352,7 @@ class MergePlugin implements PluginInterface, EventSubscriberInterface
             $installer->setOptimizeAutoloader(
                 $this->state->shouldOptimizeAutoloader()
             );
+            $installer->setIgnorePlatformRequirements(true);
 
             if ($this->state->forceUpdate()) {
                 // Force update mode so that new packages are processed rather
